@@ -57,7 +57,7 @@ contract VaultManager{
         box.transferOwnership(newOwner);
         address[] storage boxes = userDepositBoxes[msg.sender];
         for(uint i = 0; i < boxes.length; i++){
-            if(boxes[i]==_boxAddress){
+            if(boxes[i]==boxAddress){
                 boxes[i] = boxes[boxes.length-1];
                 boxes.pop();
                 break;
